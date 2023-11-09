@@ -1,71 +1,97 @@
-import java.util.Scanner;
+package Student;
 
-class Student {
-    private String first_name = "";
-    private String middle_name = "";
-    private String last_name = "";
-    private String suffix = "";
+public class Student {
+    private String ID;
+    private String first;
+    private String middle;
+    private String last;
+    private String suffix;
+    private String Age;
+    private String YR;
+    private String PN;
+    private String Em;
 
-    public String getFirstName() {
-        return first_name;
+    // Default constructor
+    public Student() {
+        // Default constructor
     }
 
-    public String getMiddleName() {
-        return middle_name;
+    // Getters
+    public String getID() {
+        return ID;
     }
 
-    public String getLastName() {
-        return last_name;
+    public String getFirst() {
+        return first;
+    }
+
+    public String getMiddle() {
+        return middle;
+    }
+
+    public String getLast() {
+        return last;
     }
 
     public String getSuffix() {
         return suffix;
     }
 
-    public void setFirstName(String fName) {
-        first_name = fName;
+    public String getAge() {
+        return Age;
     }
 
-    public void setMiddleName(String mName) {
-        middle_name = mName;
+    public String getYearLevel() {
+        return YR;
     }
 
-    public void setLastName(String lName) {
-        last_name = lName;
+    public String getPhoneNumber() {
+        return PN;
     }
 
-    public void setSuffix(String Suffix) {
-        suffix = Suffix;
+    public String getEmail() {
+        return Em;
     }
 
-    public String getFullName() {
-        return first_name + " " + middle_name + " " + last_name + " " + suffix;
+    // Setters
+    public void setID(String id) {
+        ID = id;
+    }
+
+    public void setFirst(String fName) {
+        first = fName;
+    }
+
+    public void setMiddle(String mName) {
+        middle = mName;
+    }
+
+    public void setLast(String lName) {
+        last = lName;
+    }
+
+    public void setSuffix(String sfx) {
+        suffix = sfx;
+    }
+
+    public void setAge(String age) {
+        Age = age;
+    }
+
+    public void setYearLevel(String yearLevel) {
+        YR = yearLevel;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PN = phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        Em = email;
     }
     
-    public static void main (String []args) {
-    	
-    	Scanner scan = new Scanner(System.in);
-    	Student student = new Student();
-    	
-    	System.out.println("Enter First Name: ");
-    	student.setFirstName(scan.next());
-    	
-    	System.out.println("Enter Middle Name: ");
-    	student.setMiddleName(scan.next());
-    	
-    	System.out.println("Enter Last Name: ");
-    	student.setLastName(scan.next());
-    	
-    	System.out.println("Enter Suffix: ");
-    	student.setSuffix(scan.next());
-    	
-    	System.out.println("Student's First Name: "+student.getFirstName());
-    	System.out.println("Student's Middle Name: "+student.getMiddleName());
-    	System.out.println("Student's Last Name: "+student.getLastName());
-    	System.out.println("Student's Suffix Name: "+student.getSuffix());
-    	
-    	System.out.println("The Student's full name is: "+student.getFullName());
-    	
-    	
+    // Method to get the full name
+    public String getFullName() {
+        return first + " " + middle + " " + last + " " + suffix + ".";
     }
 }
